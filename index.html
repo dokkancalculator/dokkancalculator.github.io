@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculatrice</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript">
+    	function calculer() {
+    		var inputStatistiques = document.getElementById("Stats");
+    		var Stats = inputStatistiques.value;
+    		var inputLead = document.getElementById("Lead");
+    		var Lead = 1 + (inputLead.value/100);
+    		var inputPC = document.getElementById("PC");
+    		var PC = 1 + (inputPC.value/100);
+    		var inputObjets = document.getElementById("Objets");
+    		var Objets = 1 + (inputObjets.value/100);
+    		var inputLiens = document.getElementById("Liens");
+    		var Liens = 1 + (inputLiens.value/100);
+    		var inputAS = document.getElementById("AS");
+    		var AS = 1 + (inputAS.value/100);
+    		var inputPV = document.getElementById("PV");
+    		var PV = 1 + (inputPV.value/100);
+    		var inputSPE = document.getElementById("SPE");
+    		var SPE = 1 + (inputSPE.value/100);
+    		var inputMalus = document.getElementById("Malus");
+    		var Malus = 1 - (inputMalus.value/100);
+    		var Total = Stats * Lead * PC * Objets * Liens * AS * PV * SPE * Malus;
+    		var Total = Total.toLocaleString('fr-FR');
+    		var formTotal = document.getElementById("Total");
+			formTotal.innerHTML = "Total de DEF: " + Total;
+    	}
+    </script>
+</head>
+<body>
+	<h2>
+		Calculatrice Dokkan Battle
+	</h2>
+	<p class="bienvenue">
+		Soyez les bienvenus !
+	</p>
+    <p class="présentation">
+		Sur ce site vous pourrez calculer la DEF de vos personnages de Dokkan Battle.
+	</p>
+	<p class="aide1">
+		Aide pour les passifs:
+	</p>
+	<p class="aide2">
+		Les passifs qui prennent en compte la position du personnage, les HP restants, les supports, les alliés dans l'équipe ou dans le tour et le nombre de ki pris sont des passifs classiques.
+	</p>
+	<p class="aide3">
+		Les passifs pris en compte lors de l'attaque (quelle qu'elle soit) du personnage, si des attaques sont subies ou lancées et si l'ennemi a subi un effet sont des passifs variables.
+	</p>
+	<p class="aide4">
+		Certains passifs comprennent des conditions à la fois classiques et variables. Dans ce cas, le passif est variable.
+	</p>
+	<p class="aide5">
+		Les passifs d'une même catégorie s'additionnent.
+	</p>
+	<p class="indications">
+		Veillez à rentrer les données sans unités, sans lettres et si possible en pourcentage pour le bon fonctionnement de la calculatrice. Si une donnée n'est pas prise en compte dans le calcul, veuillez rentrer "0".
+	</p>
+    <form class="Stats">
+    Statistiques:<input type="text" id="Stats" class="Stats">
+    </form>
+    <form>
+    Bonus des 2 leaders:<input type="text" id="Lead" class="Lead">
+    </form>
+    <form>
+    Passifs classiques:<input type="text" id="PC" class="PC">
+    </form>
+    <form>
+    Objets de soutien:<input type="text" id="Objets" class="Objets">
+    </form>
+    <form>
+    Liens:<input type="text" id="Liens" class="Liens">
+    </form>
+    <form>
+    Bonus d'AS:<input type="text" id="AS" class="AS">
+    </form>
+    <form>
+    Passifs variables:<input type="text" id="PV" class="PV">
+    </form>
+    <form>
+    Bonus de SPE:<input type="text" id="SPE" class="SPE">
+    </form>
+    <form>
+    Malus de DEF:<input type="text" id="Malus" class="Malus">
+    </form>
+    <button onclick="calculer()">Calculer DEF</button>
+    <form id="Total">Total de DEF: </form>
+</body>
+</html>

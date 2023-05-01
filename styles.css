@@ -1,0 +1,79 @@
+h2{
+	color: #fff;
+	padding: 10px;
+}
+
+p{
+	color: #fff;
+}
+
+p.indications{
+	margin-top: 45px;
+}
+
+p.aide1{
+	margin-top: 45px;
+}
+
+body{
+	background-color: #454A60;
+}
+
+form{
+	color: #fff;
+}
+
+form.Stats{
+	margin-top: 45px;
+}
+
+input.Stats{
+	margin-left: 58px;
+	margin-top: 10px;
+}
+
+input.Lead{
+	margin-left: 4px;
+	margin-top: 10px;
+}
+
+input.PC{
+	margin-left: 19px;
+	margin-top: 10px;
+}
+
+input.Objets{
+	margin-left: 21px;
+	margin-top: 10px;
+}
+
+input.Liens{
+	margin-left: 97px;
+	margin-top: 10px;
+}
+
+input.AS{
+	margin-left: 56px;
+	margin-top: 10px;
+}
+
+input.PV{
+	margin-left: 26px;
+	margin-top: 10px;
+}
+
+input.SPE{
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+input.Malus{
+	margin-left: 38px;
+	margin-top: 10px;
+}
+
+button{
+	margin-top: 30px;
+	margin-left: 100px;
+	margin-bottom: 30px;
+}
